@@ -1,0 +1,46 @@
+{
+  "name": "job-looply",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
+  "author": "Wojciech Borawski",
+  "license": "MIT",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "postinstall": "prisma generate & nuxt prepare",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "build": "nuxt generate && electron-builder",
+    "preview": "nuxt preview",
+    "pack": "electron-builder",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@prisma/client": "6.1.0",
+    "@trpc/client": "^10.45.2",
+    "@trpc/server": "^10.45.2",
+    "vuetify": "^3.7.6",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.27.3",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "nuxt": "^3.14.1592",
+    "nuxt-electron": "0.7.0",
+    "prisma": "6.1.0",
+    "typescript": "^5.7.2",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-vuetify": "^2.0.4"
+  },
+  "prisma": {
+    "schema": "server/prisma/schema.prisma"
+  }
+}

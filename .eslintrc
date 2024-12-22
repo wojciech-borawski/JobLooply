@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "@nuxtjs/eslint-config-typescript",
+    "@vue/eslint-config-typescript/recommended",
+    "@vue/eslint-config-prettier/skip-formatting",
+    "prettier"
+  ],
+  "ignorePatterns": ["dist-electron", "release"],
+  "rules": {
+    "no-console": "warn",
+    "no-multi-spaces": "error",
+    "no-multiple-empty-lines": "off",
+    "comma-dangle": ["error", "never"],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "vue/valid-v-slot": [
+      "error",
+      {
+        "allowModifiers": true
+      }
+    ],
+    "vue/multi-word-component-names": [
+      "error",
+      {
+        "ignores": ["index", "default", "app", "error"]
+      }
+    ],
+    "vue/attributes-order": [
+      "error",
+      {
+        "order": [
+          "DEFINITION",
+          "LIST_RENDERING",
+          "CONDITIONALS",
+          "RENDER_MODIFIERS",
+          "GLOBAL",
+          ["UNIQUE", "SLOT"],
+          "TWO_WAY_BINDING",
+          "OTHER_DIRECTIVES",
+          "OTHER_ATTR",
+          "EVENTS",
+          "CONTENT"
+        ],
+        "alphabetical": false
+      }
+    ],
+    "vue/component-tags-order": [
+      "error",
+      {
+        "order": ["script", "template", "style"]
+      }
+    ]
+  }
+}
